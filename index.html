@@ -1,0 +1,35 @@
+import time
+import os
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def type_with_effect(text, delay=0.05):
+    """Menampilkan teks dengan efek mengetik"""
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def animate_heart():
+    """Animasi hati kecil"""
+    hearts = ['💔', '❤️', '💖', '💗']
+    for heart in hearts:
+        print(f"\r{heart}", end='', flush=True)
+        time.sleep(0.3)
+
+def main():
+    clear_screen()
+    
+    # Judul lagu
+    print("=" * 50)
+    type_with_effect("LIRIK LAGU: SUDAHLAH", 0.1)
+    print("=" * 50)
+    time.sleep(1)
+    
+    # Lirik bagian 1
+    print("\n🎵 Bagian 1 🎵")
+    type_with_effect("Sudahlah, jangan menangis lagi")
+    type_with_effect("Kurasa cukup sampai di sini..")
+    time.sleep(1)
+    
+    # Animasi hati
